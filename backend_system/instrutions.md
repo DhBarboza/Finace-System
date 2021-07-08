@@ -1,2 +1,5 @@
 ### Criar arquivo de dependencias:
-- git init
+- npm init
+
+### Instalar dependencia:
+- npm install express
