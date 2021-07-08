@@ -7,3 +7,11 @@
 
 ### Run project:
 - > node app.js
+
+### Instalar dependencia
+- > npm install -g nodemon
+
+
+### Run project com nodemon:
+- > nodemon app.js
+
