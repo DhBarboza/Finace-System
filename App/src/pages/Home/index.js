@@ -1,4 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { Container,
+        CustomTitle,
+        Title, 
+        ButtonSuccess, 
+        ActionButton, 
+        PreviousNextButton, 
+        ButtonPrimary,
+        Table, 
+        TextDanger,
+        TextSuccess } from '../../styles/custom_home';
 
 export const Home = () => {
 
@@ -81,14 +91,21 @@ export const Home = () => {
     },[]);
 
     return(
-        <div>
-            <h1>Situação Finaceira:</h1>
-            <p>Ano: {dataView.year}</p>
-            <p>Mês: {dataView.month}</p>
-            <button type="button" onClick={() => previous()}>Anterior</button>
-            <button type="button" onClick={() => next()}>Próximo</button>
-
-            <table>
+        <Container>
+            <CustomTitle>
+                <Title>Situação Finaceira:</Title>
+                <ActionButton>
+                    <ButtonSuccess>Cadastrar</ButtonSuccess>
+                </ActionButton>
+            </CustomTitle>
+            
+            <PreviousNextButton>
+                <ButtonPrimary type="button" onClick={() => previous()}>Anterior</ButtonPrimary>
+                <span>{`Mês ${dataView.month} | Ano: ${dataView.year}`}</span>
+                <ButtonPrimary type="button" onClick={() => next()}>Próximo</ButtonPrimary>
+            </PreviousNextButton>
+            
+            <Table>
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -103,7 +120,7 @@ export const Home = () => {
                         <tr key={item.id}>
                             <td>{item.id}</td>
                             <td>{item.nome}</td>
-                            <td>{item.tipo === 1 ? <p>Pagamento</p> : <p>Recebimento</p>}</td>
+                            <td>{item.tipo === 1 ? <TextDanger>Pagamento</TextDanger> : <TextSuccess>Recebimento</TextSuccess>}</td>
                             <td>{item.situacao}</td>
                             <td>{item.valor}</td>
                         </tr>
@@ -118,7 +135,7 @@ export const Home = () => {
                         <td>700</td>
                     </tr>
                 </tfoot>
-            </table>
-        </div>
+            </Table>
+        </Container>
     );
 }
