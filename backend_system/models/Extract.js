@@ -26,4 +26,7 @@ const Extract = db.define('extracts', {
   }
 });
 
-Extract.sync();
+// # Run only once:
+// Extract.sync();
+
+module.exports = Extract;
