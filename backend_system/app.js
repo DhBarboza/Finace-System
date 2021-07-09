@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const db = require('./models/db'); 
+// const db = require('./models/db'); 
 
 app.get('/list', (req, res) => {
     res.send("Finance Extract")
