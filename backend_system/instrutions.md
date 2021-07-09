@@ -1,17 +1,22 @@
 ### Criar arquivo de dependencias:
-- npm init
+> npm init
 
-## Gerenciamento de requisições, rotas e URLs
-### Instalar dependencia:
-- npm install express
+### Instalar dependencia de Gerenciamento de requisições, rotas e URLs:
+> npm install express
 
 ### Run project:
-- > node app.js
+> node app.js
 
-### Instalar dependencia
-- > npm install -g nodemon
-
+### Instalar dependencia de atualização continua
+> npm install -g nodemon
 
 ### Run project com nodemon:
-- > nodemon app.js
+> nodemon app.js
 
+### Criar banco de dados MySQL:
+> CREATE DATABASE finance character set utf8mb4 collate utf8mb4_unicode_ci;
+
+### Instalar dependencia de conexão com banco de dados:
+> npm install --save sequelize
+#### Driver para o MySQl
+> npm install --save mysql2
